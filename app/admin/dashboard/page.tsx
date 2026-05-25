@@ -97,13 +97,13 @@ export default function AdminDashboardPage() {
           Icon={Edit3}
           index={2}
         />
-        <StatCard
+        {/* <StatCard
           label="Total Views"
           value={loading ? '—' : views.toLocaleString()}
           Icon={Eye}
           trend={{ value: 23, direction: 'up' }}
           index={3}
-        />
+        /> */}
         <StatCard
           label="Categories"
           value={loading ? '—' : categories}
