@@ -5,7 +5,6 @@ import { findAll } from '@/lib/blog-store'
 import { InsightsHero } from '@/components/insights/insights-hero'
 import { FeaturedInsight } from '@/components/insights/featured-insight'
 import { InsightsGrid } from '@/components/insights/insights-grid'
-import { NewsletterCTA } from '@/components/insights/newsletter-cta'
 import { LegalCTA } from '@/components/insights/legal-cta'
 
 export const metadata: Metadata = {
@@ -32,7 +31,6 @@ export default async function InsightsPage() {
       <InsightsHero />
       {featured ? <FeaturedInsight post={featured} /> : null}
       <InsightsGrid posts={rest} />
-      <NewsletterCTA />
       <LegalCTA />
       <Footer />
     </main>

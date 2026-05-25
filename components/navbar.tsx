@@ -4,13 +4,12 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 
 const navLinks = [
   { label: 'Expertise', href: '#expertise' },
-  { label: 'Insights', href: '/insights' },
   { label: 'About', href: '#about' },
+  { label: 'Insights', href: '/insights' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -53,10 +52,18 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <a
-            href="#"
-            className="flex items-center gap-3 group"
-            aria-label="VR Law Firm Home"
+          <button
+            type="button"
+            onClick={() => {
+              setMobileOpen(false)
+              if (pathname === '/') {
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              } else {
+                router.push('/')
+              }
+            }}
+            className="flex items-center gap-3 group cursor-pointer"
+            aria-label="VR Law Firm — Home"
           >
             <div className="relative w-24 h-16 flex-shrink-0">
               <Image
@@ -67,7 +74,7 @@ export function Navbar() {
                 priority
               />
             </div>
-          </a>
+          </button>
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Main navigation">

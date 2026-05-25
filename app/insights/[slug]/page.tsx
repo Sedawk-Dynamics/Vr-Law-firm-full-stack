@@ -64,7 +64,7 @@ export default async function ArticlePage({ params }: PageProps) {
               backgroundPosition: 'center',
             }}
           />
-          <div className="relative max-w-4xl mx-auto px-6">
+          <div className="relative max-w-[1200px] mx-auto px-6 lg:px-10">
             <Link
               href="/insights"
               className="inline-flex items-center gap-2 text-ivory/55 hover:text-gold text-[11px] tracking-[0.25em] uppercase mb-8 transition-colors"
@@ -125,15 +125,17 @@ export default async function ArticlePage({ params }: PageProps) {
                   ) : null}
                 </div>
               </div>
-              <ShareButtons url={shareUrl} title={post.title} />
+              {/* <ShareButtons url={shareUrl} title={post.title} /> */}
             </div>
           </div>
         </header>
 
-        <div className="relative aspect-[16/8] lg:aspect-[16/7] max-w-6xl mx-auto px-6 mb-16">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10 mb-14 lg:mb-20">
           <div
-            className="absolute inset-x-6 inset-y-0 bg-cover bg-center"
+            className="relative w-full aspect-[16/8] lg:aspect-[16/7] bg-cover bg-center"
             style={{ backgroundImage: `url(${post.featuredImage})` }}
+            role="img"
+            aria-label={post.title}
           />
         </div>
 

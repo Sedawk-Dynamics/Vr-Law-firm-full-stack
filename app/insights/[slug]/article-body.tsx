@@ -10,13 +10,13 @@ export function ArticleBody({ content }: { content: string }) {
   const [headings, setHeadings] = useState<Heading[]>([])
 
   return (
-    <section className="max-w-7xl mx-auto px-6 pb-20 lg:pb-28">
-      <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] xl:grid-cols-[280px_1fr] gap-12 lg:gap-16">
+    <section className="max-w-[1200px] mx-auto px-6 lg:px-10 pb-20 lg:pb-28">
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] xl:grid-cols-[minmax(0,1fr)_280px] gap-12 lg:gap-16 items-start">
+        <div className="min-w-0 text-left">
+          <BlogContent html={content} onHeadings={setHeadings} />
+        </div>
         <div className="hidden lg:block">
           <TableOfContents headings={headings} />
-        </div>
-        <div className="max-w-3xl">
-          <BlogContent html={content} onHeadings={setHeadings} />
         </div>
       </div>
     </section>

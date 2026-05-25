@@ -216,14 +216,6 @@ export function BlogForm({ initial }: { initial?: BlogPost }) {
           />
         </FormCard>
 
-        <FormCard label="OG Image" hint="Used for social sharing previews.">
-          <ImageUploader
-            value={form.ogImage}
-            onChange={(url) => setField('ogImage', url)}
-            label="Upload OG Image"
-            aspect="1200/630"
-          />
-        </FormCard>
       </div>
 
       <aside className="space-y-6">
