@@ -52,7 +52,7 @@ export default function AdminDashboardPage() {
           </p>
           <h1 className="text-ivory text-3xl lg:text-4xl font-light">Dashboard</h1>
           <p
-            className="text-ivory/45 text-sm mt-2"
+            className="text-ivory/45 text-sm mt-2" 
             style={{ fontFamily: 'var(--font-inter), sans-serif' }}
           >
             A snapshot of editorial output, audience reach, and pending work.
